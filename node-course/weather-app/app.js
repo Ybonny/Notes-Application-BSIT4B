@@ -1,10 +1,7 @@
-console.log("starting")
+const request = require('request')
 
-setTimeout(() => {
-    console.log('2 Second Timer')
-}, 2000)
+const url = 'http://api.weatherstack.com/current?access_key=b228ea66a5dfd37a18a7ecf6c83e61e6&query=37.8267,-122.4233'
 
-setTimeout(() => {
-    console.log('0 Second Timer')
-}, 0)
-console.log("Stopping")
+request({ url: url }, (error, response) => {
+    console.log(response)
+})
