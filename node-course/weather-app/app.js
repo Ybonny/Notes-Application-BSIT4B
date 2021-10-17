@@ -4,4 +4,5 @@ const url = 'http://api.weatherstack.com/current?access_key=b228ea66a5dfd37a18a7
 
 request({ url: url }, (error, response) => {
     const data = JSON.parse(response.body)
+    console.log(data.current)
 })
